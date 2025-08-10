@@ -1,0 +1,29 @@
+.footer {
+  /* background-color: #75819f; */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  background: #e8f9ff94;
+}
+
+.socialicons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer p a {
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 5px;
+  color: white;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - BookMyRoom</title>
+    <link rel="stylesheet" href="Style/SignIn_Page_Header_Style.css">
+    <link rel="stylesheet" href="Style/SignIn_Page_Footer.css">
+    <link rel="stylesheet" href="Style/SignInPage_css.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <video autoplay loop muted id="bg-video">
+        <source src="src/BackGrounds/background6.mp4" type="video/mp4">
+    </video>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="left">
+            <img src="src/logo2.svg" alt="Logo" id="logo">
+            <h1 id="logotext"><a href="dashboard.html">BookMyRoom</a></h1>
+        </div>
+
+        <div class="right">
+            <ul>
+                <li><a href="about.html" id="about">About</a></li>
+                <li><img src="src/user_logo.png" alt="User Logo" class="userlogo"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Login Section -->
+    <div class="login-container">
+        <div class="login-box">
+            <img src="src/logo2.svg" alt="BookMyRoom Logo" class="login-logo">
+            <h2>"Unlock Execlusive Styles"</h2>
+            <h3> -Signup Today!</h3>
+
+            <form onsubmit="return validateForm()" action="SignUp.php" method="POST">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"
+                    required>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Join Now</button>
+            </form>
+
+            <p>Already Have an Account?</p>
+            <button class="Login-account-btn" onclick="window.location.href='loginPage.html'">Login Here</button>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="socialicons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>
+        <h3> @BookMyRoom Private Limited </h3>
+        </p>
+        <p> <a href="Privacy.html"> Privacy Terms </a></p>
+    </div>
+
+</body>
+
+<script src="SignInPage_Condition.js"></script>
+
+</html>

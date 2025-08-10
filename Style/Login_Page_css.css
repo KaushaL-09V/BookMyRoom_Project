@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.login-container {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box {
+  background: #e8f9ffb1;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+}
+
+.login-logo {
+  width: 125px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: black;
+  font-size: 16px;
+}
+
+form input::placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: #61c8ff;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5082e6;
+}
+p {
+  margin-top: 30px;
+  font-size: larger;
+}
+p #NoAcc {
+  margin-top: 50px;
+  color: rgb(0, 0, 0);
+}
+
+p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.create-account-btn {
+  background: white;
+  color: black;
+  border: 2px solid #61c8ff;
+  font-size: 16px;
+  padding: 8px 15px;
+  margin-top: 10px;
+}
+
+.create-account-btn:hover {
+  background: #61c8ff;
+  color: white;
+}

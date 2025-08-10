@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing Page</title>
+
+    <!-- Updated CSS paths to match the folder structure -->
+    <link rel="stylesheet" href="Style/dashboard_Header.css">
+    <link rel="stylesheet" href="Style/dashboard_Footer.css">
+    <link rel="stylesheet" href="Style/dashboard_listing_SubHeader.css">
+    <link rel="stylesheet" href="Style/dashboard_Listing_Place.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+
+    <!-- FontAwsome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Add cursor pointer to placecard for better UX */
+        .placecard {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .placecard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="left">
+            <img src="src/logo2.svg" alt="Logo" id="logo">
+            <h1 id="logotext"><a href="dashboard.html">BookMyRoom</a></h1>
+        </div>
+
+        <div class="center">
+            <input type="text" id="searchBox" placeholder="Search...">
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div class="right">
+            <ul>
+                <li><a href="ContactUs.html" id="about">About</a></li>
+                <li><a href="loginPage.html" id="logout">Logout</a></li>
+                <li><img src="src/user_logo.png" alt="User Logo" class="userlogo"></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="BodySection">
+        <video autoplay loop muted id="bg-video">
+            <source src="src/BackGrounds/background2.mp4" type="video/mp4">
+        </video>
+
+
+        <div class="subheader" id="Wishlist">
+            <div class="category" data-target="wishlistSection">
+                <i class="fa-solid fa-heart"></i>
+                <span>Wishlist</span>
+            </div>
+            <div class="category" data-target="offersSection">
+                <i class="fa-solid fa-gift"></i>
+                <span>Offers</span>
+            </div>
+            <div class="category" data-target="mybookingSection">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>My Booking</span>
+            </div>
+            <div class="category" data-target="trendingSection">
+                <i class="fa-solid fa-fire"></i>
+                <span>Trending</span>
+            </div>
+            <div class="category" data-target="roomsSection">
+                <i class="fa-solid fa-bed"></i>
+                <span>Rooms</span>
+            </div>
+            <div class="category" data-target="citySection">
+                <i class="fa-solid fa-city"></i>
+                <span>Iconic_City</span>
+            </div>
+            <div class="category" data-target="beachesSection">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <span>Beaches</span>
+            </div>
+            <div class="category" data-target="mountainSection">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <span>Mountain</span>
+            </div>
+        </div>
+
+        <section id="trendingSection" class="categorySection">
+            <h2 class="section-title">Trending Properties</h2>
+            <div class="places-container">
+                
+                <div class="placecard"
+                    onclick="navigateToDetails('Luxury Resort & Spa', '₹12,000/night', 'trending1.jpg', 'Our most booked premium destination with 5-star amenities.')">
+                    <img src="src/BackGrounds/trending1.jpg" alt="Luxury Resort">
+                    <h3>Luxury Resort & Spa</h3>
+                    <p>Our most booked premium destination with 5-star amenities.</p>
+                    <p class="price">₹12,000/night</p>
+                </div>
+
+                
+                <div class="placecard"
+                    onclick="navigateToDetails('Exotic Treehouse Stay', '₹8,500/night', 'trending2.jpg', 'Unique accommodation surrounded by nature.')">
+                    <img src="src/BackGrounds/trending2.jpg" alt="Treehouse Stay">
+                    <h3>Exotic Treehouse Stay</h3>
+                    <p>Unique accommodation surrounded by nature.</p>
+                    <p class="price">₹8,500/night</p>
+                </div>
+
+                
+                <div class="placecard"
+                    onclick="navigateToDetails('Luxury Houseboat', '₹9,200/night', 'trending3.jpg', 'Float on the backwaters with all modern comforts.')">
+                    <img src="src/BackGrounds/trending3.jpg" alt="Houseboat">
+                    <h3>Luxury Houseboat</h3>
+                    <p>Float on the backwaters with all modern comforts.</p>
+                    <p class="price">₹9,200/night</p>
+                </div>
+
+                
+                <div class="placecard"
+                    onclick="navigateToDetails('Glass Villa', '₹15,000/night', 'trending4.jpg', '360° views with privacy and luxury in the wilderness.')">
+                    <img src="src/BackGrounds/trending4.jpg" alt="Glass Villa">
+                    <h3>Glass Villa</h3>
+                    <p>360° views with privacy and luxury in the wilderness.</p>
+                    <p class="price">₹15,000/night</p>
+                </div>
+
+                
+                <div class="placecard"
+                    onclick="navigateToDetails('Heritage Palace Stay', '₹18,500/night', 'trending5.jpg', 'Experience royal living in restored palace rooms.')">
+                    <img src="src/BackGrounds/trending5.jpg" alt="Heritage Palace">
+                    <h3>Heritage Palace Stay</h3>
+                    <p>Experience royal living in restored palace rooms.</p>
+                    <p class="price">₹18,500/night</p>
+                </div>
+
+                
+                <div class="placecard"
+                    onclick="navigateToDetails('Private Island Resort', '₹25,000/night', 'trending6.jpg', 'Exclusive island getaway with personal butler service.')">
+                    <img src="src/BackGrounds/trending6.jpg" alt="Private Island">
+                    <h3>Private Island Resort</h3>
+                    <p>Exclusive island getaway with personal butler service.</p>
+                    <p class="price">₹25,000/night</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROOMS SECTION -->
+        <section id="roomsSection" class="categorySection">
+            <h2 class="section-title">Room Types</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Deluxe Double Room', '₹3,500/night', 'room1.jpg', 'Spacious room with king-sized bed and city view.')">
+                    <img src="src/BackGrounds/room1.jpg" alt="Deluxe Room">
+                    <h3>Deluxe Double Room</h3>
+                    <p>Spacious room with king-sized bed and city view.</p>
+                    <p class="price">₹3,500/night</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Family Suite', '₹6,000/night', 'room2.jpg', 'Two-bedroom suite perfect for families.')">
+                    <img src="src/BackGrounds/room2.jpg" alt="Family Suite">
+                    <h3>Family Suite</h3>
+                    <p>Two-bedroom suite perfect for families.</p>
+                    <p class="price">₹6,000/night</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Budget Single Room', '₹1,800/night', 'room3.jpg', 'Cozy and affordable option for solo travelers.')">
+                    <img src="src/BackGrounds/room3.jpg" alt="Budget Room">
+                    <h3>Budget Single Room</h3>
+                    <p>Cozy and affordable option for solo travelers.</p>
+                    <p class="price">₹1,800/night</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Executive Suite', '₹8,500/night', 'room4.jpg', 'Premium accommodation with separate living area.')">
+                    <img src="src/BackGrounds/room4.jpg" alt="Executive Suite">
+                    <h3>Executive Suite</h3>
+                    <p>Premium accommodation with separate living area.</p>
+                    <p class="price">₹8,500/night</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Twin Room', '₹2,800/night', 'room5.jpg', 'Room with two single beds, ideal for friends.')">
+                    <img src="src/BackGrounds/room5.jpg" alt="Twin Room">
+                    <h3>Twin Room</h3>
+                    <p>Room with two single beds, ideal for friends.</p>
+                    <p class="price">₹2,800/night</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Honeymoon Suite', '₹12,000/night', 'room6.jpg', 'Romantic suite with private jacuzzi and champagne.')">
+                    <img src="src/BackGrounds/room6.jpg" alt="Honeymoon Suite">
+                    <h3>Honeymoon Suite</h3>
+                    <p>Romantic suite with private jacuzzi and champagne.</p>
+                    <p class="price">₹12,000/night</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ICONIC CITY SECTION -->
+        <section id="citySection" class="categorySection">
+            <h2 class="section-title">Iconic City Stays</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Mumbai Sea View Apartment', '₹7,800/night', 'city1.jpg', 'Modern apartment overlooking Marine Drive.')">
+                    <img src="src/BackGrounds/city1.jpg" alt="Mumbai Apartment">
+                    <h3>Mumbai Sea View Apartment</h3>
+                    <p>Modern apartment overlooking Marine Drive.</p>
+                    <p class="price">₹7,800/night</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Ahmedabad Heritage Haveli', '₹5,200/night', 'city2.jpg', 'Traditional home in the heart of the capital.')">
+                    <img src="src/BackGrounds/city2.jpg" alt="Ahmedabad Haveli">
+                    <h3>Ahmedabad Heritage Haveli</h3>
+                    <p>Traditional home in the heart of the capital.</p>
+                    <p class="price">₹5,200/night</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Jaipur Pink City Palace', '₹9,500/night', 'city3.jpg', 'Royal stay with views of historic monuments.')">
+                    <img src="src/BackGrounds/city3.jpg" alt="Jaipur Palace">
+                    <h3>Jaipur Pink City Palace</h3>
+                    <p>Royal stay with views of historic monuments.</p>
+                    <p class="price">₹9,500/night</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Kolkata Colonial Mansion', '₹6,300/night', 'city4.jpg', 'Restored British-era home with antique furnishings.')">
+                    <img src="src/BackGrounds/city4.jpg" alt="Kolkata Colonial">
+                    <h3>Kolkata Colonial Mansion</h3>
+                    <p>Restored British-era home with antique furnishings.</p>
+                    <p class="price">₹6,300/night</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Bangalore Tech Hub Penthouse', '₹8,200/night', 'city5.jpg', 'Modern penthouse in the Silicon Valley of India.')">
+                    <img src="src/BackGrounds/city5.jpg" alt="Bangalore Penthouse">
+                    <h3>Bangalore Tech Hub Penthouse</h3>
+                    <p>Modern penthouse in the Silicon Valley of India.</p>
+                    <p class="price">₹8,200/night</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Varanasi Ganga View Guesthouse', '₹4,500/night', 'city6.jpg', 'Traditional guesthouse overlooking the holy river.')">
+                    <img src="src/BackGrounds/city6.jpg" alt="Varanasi Riverside">
+                    <h3>Varanasi Ganga View Guesthouse</h3>
+                    <p>Traditional guesthouse overlooking the holy river.</p>
+                    <p class="price">₹4,500/night</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEACHES SECTION -->
+        <section id="beachesSection" class="categorySection">
+            <h2 class="section-title">Beach Getaways</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Goa Beach Luxury Hut', '₹6,500/night', 'beach1.jpg', 'Beachfront bamboo hut with modern amenities.')">
+                    <img src="src/BackGrounds/beach1.jpg" alt="Goa Beach Hut">
+                    <h3>Goa Beach Luxury Hut</h3>
+                    <p>Beachfront bamboo hut with modern amenities.</p>
+                    <p class="price">₹6,500/night</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Andaman Private Beach Resort', '₹12,800/night', 'beach2.jpg', 'Exclusive resort on pristine Radhanagar Beach.')">
+                    <img src="src/BackGrounds/beach2.jpg" alt="Andaman Island Resort">
+                    <h3>Andaman Private Beach Resort</h3>
+                    <p>Exclusive resort on pristine Radhanagar Beach.</p>
+                    <p class="price">₹12,800/night</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Kerala Beachside Villa', '₹8,200/night', 'beach3.jpg', 'Traditional architecture meets modern luxury.')">
+                    <img src="src/BackGrounds/beach3.jpg" alt="Kerala Beach Villa">
+                    <h3>Kerala Beachside Villa</h3>
+                    <p>Traditional architecture meets modern luxury.</p>
+                    <p class="price">₹8,200/night</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Kovalam Ocean View Resort', '₹7,500/night', 'beach4.jpg', 'Family-friendly resort with private beach access.')">
+                    <img src="src/BackGrounds/beach4.jpg" alt="Kovalam Resort">
+                    <h3>Kovalam Ocean View Resort</h3>
+                    <p>Family-friendly resort with private beach access.</p>
+                    <p class="price">₹7,500/night</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Diu Portuguese Beach House', '₹5,800/night', 'beach5.jpg', 'Colonial-style beach house with vintage charm.')">
+                    <img src="src/BackGrounds/beach5.jpg" alt="Diu Beach House">
+                    <h3>Diu Portuguese Beach House</h3>
+                    <p>Colonial-style beach house with vintage charm.</p>
+                    <p class="price">₹5,800/night</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Puri Beachfront Resort', '₹4,200/night', 'beach6.jpg', 'Wake up to the sound of waves crashing.')">
+                    <img src="src/BackGrounds/beach6.jpg" alt="Puri Beach Resort">
+                    <h3>Puri Beachfront Resort</h3>
+                    <p>Wake up to the sound of waves crashing.</p>
+                    <p class="price">₹4,200/night</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOUNTAIN SECTION -->
+        <section id="mountainSection" class="categorySection">
+            <h2 class="section-title">Mountain Retreats</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Shimla Pine Forest Cottage', '₹5,800/night', 'mountain1.jpg', 'Cozy wooden cottage surrounded by pine trees.')">
+                    <img src="src/BackGrounds/mountain1.jpg" alt="Shimla Cottage">
+                    <h3>Shimla Pine Forest Cottage</h3>
+                    <p>Cozy wooden cottage surrounded by pine trees.</p>
+                    <p class="price">₹5,800/night</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Manali Alpine Chalet', '₹7,200/night', 'mountain2.jpg', 'Swiss-style chalet with mountain views.')">
+                    <img src="src/BackGrounds/mountain2.jpg" alt="Manali Chalet">
+                    <h3>Manali Alpine Chalet</h3>
+                    <p>Swiss-style chalet with mountain views.</p>
+                    <p class="price">₹7,200/night</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Darjeeling Tea Estate Stay', '₹6,500/night', 'mountain3.jpg', 'Heritage bungalow on a working tea plantation.')">
+                    <img src="src/BackGrounds/mountain3.jpg" alt="Darjeeling Tea Estate">
+                    <h3>Darjeeling Tea Estate Stay</h3>
+                    <p>Heritage bungalow on a working tea plantation.</p>
+                    <p class="price">₹6,500/night</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Mussoorie Valley View Villa', '₹8,800/night', 'mountain4.jpg', 'British-era villa with panoramic Himalayan views.')">
+                    <img src="src/BackGrounds/mountain4.jpg" alt="Mussoorie Villa">
+                    <h3>Mussoorie Valley View Villa</h3>
+                    <p>British-era villa with panoramic Himalayan views.</p>
+                    <p class="price">₹8,800/night</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Coorg Coffee Estate Homestay', '₹4,500/night', 'mountain5.jpg', 'Traditional Kodava home amid coffee plantations.')">
+                    <img src="src/BackGrounds/mountain5.jpg" alt="Coorg Homestay">
+                    <h3>Coorg Coffee Estate Homestay</h3>
+                    <p>Traditional Kodava home amid coffee plantations.</p>
+                    <p class="price">₹4,500/night</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Kasol Riverside Cabin', '₹3,800/night', 'mountain6.jpg', 'Rustic cabin with Parvati River views.')">
+                    <img src="src/BackGrounds/mountain6.jpg" alt="Kasol Riverside">
+                    <h3>Kasol Riverside Cabin</h3>
+                    <p>Rustic cabin with Parvati River views.</p>
+                    <p class="price">₹3,800/night</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFFERS SECTION -->
+        <section id="offersSection" class="categorySection">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Last Minute Beach Deal', '₹5,000/night', 'offer1.jpg', '50% off on beachfront properties for this weekend.')">
+                    <img src="src/BackGrounds/offer1.jpg" alt="Last Minute Deal">
+                    <h3>Last Minute Beach Deal</h3>
+                    <p>50% off on beachfront properties for this weekend.</p>
+                    <p class="price"><span class="original-price">₹10,000</span> ₹5,000/night</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Family Holiday Package', 'From ₹4,500/night', 'offer2.jpg', 'Book 3 nights, get 1 night free at selected resorts.')">
+                    <img src="src/BackGrounds/offer2.jpg" alt="Family Package">
+                    <h3>Family Holiday Package</h3>
+                    <p>Book 3 nights, get 1 night free at selected resorts.</p>
+                    <p class="price">From ₹4,500/night</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Honeymoon Special', '₹12,000/night', 'offer3.jpg', 'Complimentary spa and dinner for couples.')">
+                    <img src="src/BackGrounds/offer3.jpg" alt="Honeymoon Special">
+                    <h3>Honeymoon Special</h3>
+                    <p>Complimentary spa and dinner for couples.</p>
+                    <p class="price">₹12,000/night</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Work From Mountain', '₹4,200/night', 'offer4.jpg', '30% off for stays longer than 7 days.')">
+                    <img src="src/BackGrounds/offer4.jpg" alt="Long Stay Discount">
+                    <h3>Work From Mountain</h3>
+                    <p>30% off for stays longer than 7 days.</p>
+                    <p class="price"><span class="original-price">₹6,000</span> ₹4,200/night</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Early Bird Discount', 'Starts at ₹3,000/night', 'offer5.jpg', '25% off when you book 60 days in advance.')">
+                    <img src="src/BackGrounds/offer5.jpg" alt="Early Bird">
+                    <h3>Early Bird Discount</h3>
+                    <p>25% off when you book 60 days in advance.</p>
+                    <p class="price">Starts at ₹3,000/night</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Monsoon Special', '₹5,500/night', 'offer6.jpg', 'Buy 2 nights, get 2 nights free during monsoon season.')">
+                    <img src="src/BackGrounds/offer6.jpg" alt="Monsoon Special">
+                    <h3>Monsoon Special</h3>
+                    <p>Buy 2 nights, get 2 nights free during monsoon season.</p>
+                    <p class="price">₹5,500/night</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MY BOOKING SECTION -->
+        <section id="mybookingSection" class="categorySection">
+            <h2 class="section-title">Your Bookings</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Jaipur Heritage Hotel', 'Booking: June 15-18, 2025', 'booking1.jpg', 'Booking status: Confirmed')">
+                    <img src="src/BackGrounds/booking1.jpg" alt="Upcoming Booking">
+                    <h3>Jaipur Heritage Hotel</h3>
+                    <p>Booking dates: June 15-18, 2025</p>
+                    <p class="booking-status confirmed">Confirmed</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Goa Beach Resort', 'Booking: March 5-10, 2025', 'booking2.jpg', 'Booking status: Completed')">
+                    <img src="src/BackGrounds/booking2.jpg" alt="Past Booking">
+                    <h3>Goa Beach Resort</h3>
+                    <p>Booking dates: March 5-10, 2025</p>
+                    <p class="booking-status completed">Completed</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Mumbai Luxury Apartment', 'Booking: April 2-5, 2025', 'booking3.jpg', 'Booking status: Cancelled')">
+                    <img src="src/BackGrounds/booking3.jpg" alt="Cancelled Booking">
+                    <h3>Mumbai Luxury Apartment</h3>
+                    <p>Booking dates: April 2-5, 2025</p>
+                    <p class="booking-status cancelled">Cancelled</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WISHLIST SECTION -->
+        <section id="wishlistSection" class="categorySection">
+            <h2 class="section-title">Your Wishlist</h2>
+            <div class="places-container">
+                <!-- Card 1 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Udaipur Lake Palace', '₹22,000/night', 'wishlist1.jpg', 'Luxury hotel on Lake Pichola.')">
+                    <img src="src/BackGrounds/wishlist1.jpg" alt="Wishlist Item">
+                    <h3>Udaipur Lake Palace</h3>
+                    <p>Luxury hotel on Lake Pichola.</p>
+                    <p class="price">₹22,000/night</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Himachal Mountain Cabin', '₹8,500/night', 'wishlist2.jpg', 'Rustic cabin with snow-capped views.')">
+                    <img src="src/BackGrounds/wishlist2.jpg" alt="Wishlist Item">
+                    <h3>Himachal Mountain Cabin</h3>
+                    <p>Rustic cabin with snow-capped views.</p>
+                    <p class="price">₹8,500/night</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Rajasthan Desert Camp', '₹15,000/night', 'wishlist3.jpg', 'Luxury tents in the Thar Desert.')">
+                    <img src="src/BackGrounds/wishlist3.jpg" alt="Wishlist Item">
+                    <h3>Rajasthan Desert Camp</h3>
+                    <p>Luxury tents in the Thar Desert.</p>
+                    <p class="price">₹15,000/night</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="placecard"
+                    onclick="navigateToDetails('Kerala Backwater Houseboat', '₹12,500/night', 'wishlist4.jpg', 'Traditional houseboat with modern amenities.')">
+                    <img src="src/BackGrounds/wishlist4.jpg" alt="Wishlist Item">
+                    <h3>Kerala Backwater Houseboat</h3>
+                    <p>Traditional houseboat with modern amenities.</p>
+                    <p class="price">₹12,500/night</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="socialicons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>
+        <h3> @BookMyRoom Private Limited </h3>
+        </p>
+        <p> <a href="Privacy.html"> Privacy Terms </a></p>
+    </div>
+
+</body>
+
+<script src="dashboard_categories.js"></script>
+
+</html>

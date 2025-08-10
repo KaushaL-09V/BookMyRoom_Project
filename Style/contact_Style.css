@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("BackGrounds/background2.mp4") no-repeat center center fixed;
+  background-size: cover;
+  color: black;
+}
+#bg-video {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contactdiv {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contactdiv h2 {
+  color: white;
+  font-size: xx-large;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.781);
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.about p,
+.choose ul,
+.contact-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+}
+
+.choose ul {
+  list-style: none;
+  padding: 0;
+}
+
+.choose ul li {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: rgba(0, 0, 0, 0.58);
+  margin: 0 10px;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #00aced;
+}

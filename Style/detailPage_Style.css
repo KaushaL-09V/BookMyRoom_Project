@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("BackGrounds/background2.mp4") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.detailContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.detailBox {
+  background: rgba(255, 255, 255, 0.781);
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.place-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.room-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+.roomTitle {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.price,
+.contact {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.address {
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.reviews h3,
+.map h3 {
+  margin: 20px 0 10px;
+}
+
+.reviews {
+  border: 2px solid black;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.reviewCards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reviewCard {
+  background: rgba(144, 228, 222, 0.847);
+  padding: 10px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 150px;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.map {
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 7px;
+  padding: auto;
+}
+
+.map h3 {
+  margin-left: 10px;
+}
+
+iframe {
+  margin: 0px 10px;
+  width: 96%;
+  border: 2px solid black;
+  border-radius: 7px;
+}
