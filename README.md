@@ -1,90 +1,29 @@
-📌 BookMyRoom – Room Listing & Booking Platform
-A dynamic room listing and hotel booking platform with user authentication.The platform allows users to sign up, log in, browse trending properties, and manage bookings.
-✨ Features
+# 📌 BookMyRoom – Room Listing & Booking Platform
 
-🛎 User Authentication – Secure sign-up and login using PHP (WAMP) & MySQL.
-📋 Property Listings – Display trending properties with images, descriptions, and pricing.
-🎯 Search Functionality – Find rooms based on keywords.
-📱 Responsive Design – Works across desktops, tablets, and mobile devices.
-🌊 Attractive UI – Clean, modern design with video background for signup/login pages.
+A dynamic **room listing and hotel booking platform** with **user authentication**.  
+The platform allows users to **sign up, log in, browse trending properties, and manage bookings**.  
 
-🖥️ Tech Stack
+---
 
-Frontend: HTML, CSS, JavaScript  
-Backend: PHP (WAMP) (used only for authentication)  
-Database: MySQL  
-Server Environment: WAMP Server
+## ✨ Features
+- 🛎 **User Authentication** – Secure sign-up and login using PHP (WAMP) & MySQL.
+- 📋 **Property Listings** – Display trending properties with images, descriptions, and pricing.
+- 📱 **Responsive Design** – Works across desktops, tablets, and mobile devices.
+- 🌊 **Attractive UI** – Clean, modern design with video background for signup/login pages.
 
-📂 Project Structure
-BookMyRoom/
-│
-├── index.html          # Homepage with property listings
-├── signup.html         # User registration page
-├── login.html          # User login page
-├── css/                # Stylesheets
-├── js/                 # JavaScript files
-├── php/                # PHP backend scripts (authentication)
-└── database/           # MySQL database (users table)
+---
 
-🗄️ Database Structure
-Database Name: bookmyroomTable: users  
+## 🖥️ Tech Stack
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP (WAMP) *(used only for authentication)*  
+- **Database:** MySQL  
+- **Server Environment:** WAMP Server  
 
+---
 
+## 🗄️ Database Structure
+**Database Name:** `bookmyroom`  
+**Table:** `users`  
 
-id
-username
-password
-email
-
-
-
-1
-Kaushal0809
-123456
-gitavadher3044@gmail.com
-
-
-2
-Gopal123
-123456
-gopal@gmail.com
-
-
-3
-Yash123
-123456
-yash@gmail.com
-
-
-🚀 Installation & Setup
-
-Clone the repository
-git clone https://github.com/yourusername/BookMyRoom.git
-cd BookMyRoom
-
-
-Setup WAMP/XAMPP
-
-Place the project folder in the www (WAMP) or htdocs (XAMPP) directory.
-
-
-Import Database
-
-Open phpMyAdmin.
-Create a database named bookmyroom.
-Import the provided .sql file from the database/ folder.
-
-
-Run the Project
-
-Start Apache & MySQL in WAMP/XAMPP.
-Visit http://localhost/BookMyRoom/ in your browser.
-
-
-
-📸 Screenshots
-
-Database View (phpMyAdmin)
-Signup Page
-Login Page
-Homepage – Trending Properties
+| id  | username     | password | email                 |
+|-----|-------------|----------|-----------------------|
